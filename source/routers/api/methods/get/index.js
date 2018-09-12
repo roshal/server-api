@@ -1,7 +1,7 @@
-import _databases__master from '../../../../databases/storage'
+import _databases__storage from '../../../../databases/storage'
 //
 export default (data, response) => {
-	_databases__master(async (database) => {
+	_databases__storage(async (database) => {
 		const collection = database.collection('collection')
 		const cursor = await collection.find(data)
 		await cursor.toArray(
